@@ -15,3 +15,19 @@ if (-not (Get-Command choco -ErrorAction SilentlyContinue)) {
 # Wait for the choco to be loaded
 Start-Sleep -Seconds 5
 refreshenv
+
+# List of software to install
+$softwares = @(
+    "bitwarden",
+    "brave",
+    "dropbox",
+    "epicgameslauncher",
+    "evernote",
+    "goggalaxy",
+    "googlechrome",
+    "obsidian",
+    "steam",
+    "ubisoft-connect",
+    "virtualbox",
+    "vscode"
+)
