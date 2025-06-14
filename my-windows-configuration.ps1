@@ -31,3 +31,14 @@ $softwares = @(
     "virtualbox",
     "vscode"
 )
+
+# Installation of each program
+foreach ($sofware in $softwares) {
+    Write-Host "Installing $software..." -ForegroundColor Cyan
+    choco install $sofware -y --ignore-checksums
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "$Software installed successfully." -ForegroundColor Green
+    } else {
+        Write-Host "Erro installing $software." -ForegroundColor Red
+    }
+}
